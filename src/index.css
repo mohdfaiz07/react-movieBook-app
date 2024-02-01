@@ -1,0 +1,67 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+  
+}
+
+html,body{
+  width: 100%;
+  font-size: 16px;
+}
+
+.card-container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  gap: 50px;
+  background-color: #e0e0e0;
+
+}
+
+ul{
+  list-style: none;
+}
+
+
+.bookingForm-container{
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.bookingForm-button{
+  padding: 3px 15px;
+  background-color: red;
+  color: #fff;
+  
+
+}
+
+
+
+
+
+
+
+@media (min-width: 576px) and (max-width: 740px) {
+    
+html,body{
+  
+  font-size: 13px;
+}
+
+    }
+
+@media (max-width: 576px) {
+
+  html,body{
+    font-size: 10px;
+  }
+  }
