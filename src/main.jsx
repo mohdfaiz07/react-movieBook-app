@@ -6,7 +6,8 @@ import {  RouterProvider, createBrowserRouter } from 'react-router-dom'
 import MovieDetails from './components/movieDetails.jsx/MovieDetails.jsx'
 import Home from './components/Home.jsx'
 import BookingForm from './components/form/BookingForm.jsx'
-import { BookingProvider } from './context/BookingProvider.jsx'
+import Error from './components/error/Error.jsx'
+import ContextStore from './context/ContextStore.jsx'
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,10 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home/>
       },
-
+      {
+        path: '*',
+        element: <Error/>
+      },
       {
         path: '/movie/:id',
         element: <MovieDetails/>
@@ -36,9 +40,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BookingProvider >
+    <ContextStore>
     <RouterProvider router={router}>
     </RouterProvider>
-    </BookingProvider>
+    </ContextStore>
   </React.StrictMode>,
 )

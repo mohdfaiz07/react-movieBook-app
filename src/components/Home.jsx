@@ -1,41 +1,34 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import MovieList from "./movieList/MovieList";
+import { moviesContext } from "../context/ContextStore";
+import Loading from "./loading/Loading";
 
 //Api url
 
 const Home = () => {
-  const [moviesData, setmoviesData] = useState([]);
+  const { moviesData, searchVal } = useContext(moviesContext);
+  
+  const filterData = moviesData && moviesData.filter( (movie)=>{
+   return movie.show.name.toLowerCase().includes(searchVal.toLowerCase())
 
-  const API_URL = "https://api.tvmaze.com/search/shows?q=all";
+  } )
+  console.log(filterData)
 
-  // API data fetch function
-  const fetchData = async (url) => {
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      console.log(data);
-      setmoviesData(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  // api function call using useEffect
 
-  useEffect(() => {
-    fetchData(API_URL);
-  }, []);
 
   return (
     <>
       <ul className="card-container">
-        {moviesData &&
-          moviesData.map((item) => {
+        {filterData.length > 0 ?
+          filterData.map((item) => {
             return (
               <li key={item.show.id}>
                 <MovieList data={item} />
               </li>
             );
-          })}
+          })
+        : <Loading/>
+        }
       </ul>
     </>
   );

@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { BookingContext } from '../../context/BookingProvider';
+import React from 'react';
+
 
 const BookingForm = () => {
-  const { addBooking } = useContext(BookingContext);
+ 
 
   const handleConfirmBooking = () => {
     const movieData = {
@@ -15,7 +15,7 @@ const BookingForm = () => {
         'https://static.tvmaze.com/uploads/images/original_untouched/413/1034988.jpg',
     };
 
-    addBooking(movieData);
+ 
   };
 
   return (
@@ -41,7 +41,7 @@ const BookingForm = () => {
         </p>
       </div>
       <div>
-        <button onClick={handleConfirmBooking} className='bookingForm-button'>Confirm Booking</button>
+        <button className='bookingForm-button'>Confirm Booking</button>
       </div>
     </div>
           </div>
