@@ -32,6 +32,7 @@ const MovieDetails = () => {
     <>
       {movie && movie.image && (
         <div className={style.movieDetailContainer}>
+    
           <div className={style.detailsLeft}>
             <div className={style.detaileImg}>
               <img src={movie.image.original} alt="image" loading="lazy" />
@@ -59,6 +60,8 @@ const MovieDetails = () => {
               </Link>
             </div>
           </div>
+
+
         </div>
       )}
     </>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { moviesContext } from '../../context/ContextStore'
 
 const SearchInput = () => {
@@ -6,6 +6,7 @@ const SearchInput = () => {
     const {searchVal,setSearchVal} = useContext(moviesContext)
     
     const searchChangeHandler = (e)=>{
+    
         setSearchVal(e.target.value)
     }
 

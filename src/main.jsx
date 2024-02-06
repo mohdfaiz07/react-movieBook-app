@@ -8,6 +8,7 @@ import Home from './components/Home.jsx'
 import BookingForm from './components/form/BookingForm.jsx'
 import Error from './components/error/Error.jsx'
 import ContextStore from './context/ContextStore.jsx'
+import Dashboard from './components/dashboard/Dashboard.jsx'
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,13 @@ const router = createBrowserRouter([
       {
         path: '/booking/:id',
         element: <BookingForm/>
-      }
+      },
+      
+      {
+        path: '/dashboard',
+        element: <Dashboard/>
+      },
+      
     ]
   }
 

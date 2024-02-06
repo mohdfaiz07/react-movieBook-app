@@ -10,7 +10,7 @@ const MovieList = (props) => {
         <Link to = {`/movie/${show.id}`} style={{textDecoration: "none", color: 'inherit'}}  >
       <div className={style.card}> 
         <div className={style.cardImg}> 
-          <img src={imageUrl} alt="image" />
+          <img src={imageUrl} alt="image not found" />
         </div>
         <div className={style.cardText}> 
           <div className={style.movieName}> 

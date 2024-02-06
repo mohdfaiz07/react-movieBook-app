@@ -1,13 +1,15 @@
-import React from 'react'
+import React from "react";
+import style from "./Loading.module.css";
 
 const Loading = () => {
   return (
-    <div style={{display: "flex", justifyContent: "center",  
-    alignItems: "center", height: '50vh', }}>
-      <h1>loading....</h1>
+    <>
+      <div className={style.progressbar}>
+        <span className={style.loading}></span>
+        <div className={style.load}>LOADING...</div>
+      </div>
+    </>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Loading
+export default Loading;

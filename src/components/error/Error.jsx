@@ -2,7 +2,7 @@ import React from 'react'
 
 const Error = () => {
   return (
-    <div>kya miya kuch bhi kar rahe ho</div>
+    <div>Please check your internet...</div>
   )
 }
 
