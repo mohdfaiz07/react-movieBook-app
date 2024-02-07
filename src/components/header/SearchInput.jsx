@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, } from 'react'
 import { moviesContext } from '../../context/ContextStore'
 
 const SearchInput = () => {
@@ -17,7 +17,7 @@ const SearchInput = () => {
     placeholder='type movie name...' 
     value={searchVal}
     onChange={searchChangeHandler} 
-    style={{padding: "7px 15px", borderRadius: '4px', border: "none", outline:'none    '}}/>
+    style={{padding: "7px 15px", borderRadius: '4px', border: "none", outline:'none', backgroundColor: 'white'}}/>
    </>
   )
 }
