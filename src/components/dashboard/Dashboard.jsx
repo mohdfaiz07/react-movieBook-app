@@ -6,7 +6,10 @@ const Dashboard = () => {
     const  {bookingList} = useContext(moviesContext);
 
   return (
-    <div>
+    <div className={style.dashboardContainer}>
+      {bookingList.length >0 ?
+
+      <div className={style.tableContainer}>
       <table className={style.movieTable}>
       <thead>
         <tr>
@@ -17,6 +20,7 @@ const Dashboard = () => {
           <th>Movie Genres</th>
           <th>Action</th>
         </tr>
+        
       </thead>
       <tbody>
         {bookingList.map(movie => (
@@ -30,8 +34,15 @@ const Dashboard = () => {
           </tr>
         ))}
       </tbody>
-    </table>
       
+    </table>
+    </div>
+    : <div className={style.nobooking}>
+      <p>no data available......</p>
+    </div>
+
+
+        }
     </div>
 
 
