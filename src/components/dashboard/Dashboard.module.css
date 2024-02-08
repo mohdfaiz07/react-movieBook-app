@@ -58,5 +58,7 @@
 
     text-align: center;
     width: 100%;
+    padding-top: 30px;
+    text-transform: capitalize;
   }
   

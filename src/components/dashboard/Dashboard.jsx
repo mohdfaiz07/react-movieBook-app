@@ -25,7 +25,7 @@ const Dashboard = () => {
       <tbody>
         {bookingList.map(movie => (
           <tr key={movie.show.id}>
-            <td>{movie.show.id}</td>
+            <td>{bookingList.length}</td>
             <td>{movie.show.name}</td>
             <td>{movie.show.language}</td>
             <td>{movie.show.rating.average}</td>

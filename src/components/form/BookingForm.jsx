@@ -3,10 +3,11 @@ import React
 useState } from 'react';
 import style from './BookingForm.module.css'
 import { moviesContext } from '../../context/ContextStore';
-import { useNavigate, useParams } from 'react-router-dom';
+import {  useNavigate, useParams } from 'react-router-dom';
 
 const BookingForm = () => {
  const { id } =  useParams()  
+ const navigate = useNavigate()
 const  {setBookingList, moviesData} = useContext(moviesContext)
    
    
@@ -16,7 +17,7 @@ const  {setBookingList, moviesData} = useContext(moviesContext)
       e.preventDefault();
       setBookingList( (prev)=> [ ...prev, filterData]);
       console.log('clicked')
-
+      navigate('/dashboard')
     }
 
 
@@ -84,7 +85,7 @@ const  {setBookingList, moviesData} = useContext(moviesContext)
       </div>
       
 
-      <input type="submit" value='confirm booking' className= {style.formButton}/>
+      <input type="submit" value='confirm booking' className= {style.formButton} />
     </form>
    
 
